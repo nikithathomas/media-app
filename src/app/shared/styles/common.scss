@@ -1,0 +1,22 @@
+$var-black: black;
+$var-white: white;
+$var-blue: blue;
+$var-gray:gray;
+$var-lightgray:lightgray;
+
+@mixin general-padding($top-padding, $bottom-padding) {
+  padding: $top-padding 2rem $bottom-padding 2rem;
+}
+@mixin button-anchor() {
+  color: $var-blue;
+  border: none;
+  background-color: transparent;
+}
+@mixin solid-button() {
+  background-color: $var-blue;
+  color: $var-white;
+  border-radius: 7px;
+  border: none;
+  font-size: 16px;
+  height: 40px;
+}

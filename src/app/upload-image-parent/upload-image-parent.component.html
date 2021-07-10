@@ -1,0 +1,13 @@
+<div class="upload-image">
+    <button (click)="open()" class="upload-image__button">
+        Upload Image
+    </button>
+    <div *ngIf="imageSrc">
+        <span class="pl-5">
+        <img [src]="imageSrc" alt="Cropped Image">
+        </span>
+        <span class="pl-5">
+            {{imageFileName | ellipsePipe}}
+        </span>
+    </div>
+</div>

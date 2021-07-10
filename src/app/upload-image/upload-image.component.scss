@@ -1,0 +1,84 @@
+@import "../shared/styles/common.scss";
+
+.modal-header {
+  &__reupload {
+    padding-left: 15px;
+    padding-top: 6px;
+    @include button-anchor();
+  }
+  &__close {
+    font-weight: normal;
+    color: $var-gray;
+    font-size: 2.5rem;
+    line-height: 0.7;
+  }
+}
+.modal-title {
+  font-size: 24px;
+}
+.modal-body {
+  @include general-padding(4rem, 3rem);
+  &__drop {
+    width: 100%;
+    height: 400px;
+    text-align: center;
+    border: 3px dotted $var-gray;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__input {
+    opacity: 0;
+  }
+
+  &__label {
+    color: $var-blue;
+    font-weight: bold;
+  }
+}
+.modal-footer {
+  @include general-padding(2rem, 2rem);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__preview {
+    border-radius: 50%;
+    border: 2px solid $var-lightgray;
+    padding: 15px;
+    width: 100px;
+    height: 100px;
+  }
+  &__prev-img {
+    text-align: center;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    max-width: 100%;
+  }
+  &__prev-container {
+    align-items: center;
+  }
+  &__prev-text {
+    padding-left: 15px;
+    color: $var-gray;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  &__cancel {
+    @include button-anchor();
+    font-size: 16px;
+    padding-right: 20px;
+  }
+  &__save {
+    padding: 0 20px 0 20px;
+    @include solid-button();
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import "../shared/styles/common.scss";
+
+.upload-image {
+  height: 400px;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px dotted $var-black;
+  border-radius: 7px;
+  margin: auto;
+
+  &__button {
+    @include solid-button();
+    padding: 0 20px 0 20px;
+  }
+}
