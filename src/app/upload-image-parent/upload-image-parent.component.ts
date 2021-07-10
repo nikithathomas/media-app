@@ -17,7 +17,10 @@ export class UploadImageParentComponent implements OnInit {
   }
 
   open(): void {
+    // opening the modal with content
     const uploadImageModal = this.modalService.open(UploadImageComponent, { size: 'xl' });
+
+    // Receiving the event emitted from the modal
     uploadImageModal.componentInstance.croppedImgDetails.subscribe((data: Array<any>) => {
       this.imageSrc = data[0];
       this.imageFileName = data[1];
